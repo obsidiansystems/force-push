@@ -1,0 +1,59 @@
+cabal-version:      2.4
+name:               force-push
+version:            0.1.0.0
+synopsis:
+
+-- A longer description of the package.
+-- description:
+homepage:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            NONE
+author:             Obsidian Systems LLC
+copyright:          Obsidian Systems LLC 2022
+maintainer:         maintainer@obsidian.systems
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  Force
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base
+                    , obelisk-command
+                    , obelisk-cliapp
+                    , obelisk-route
+                    , logging-effect
+                    , which
+                    , exceptions
+                    , containers
+                    , data-default
+                    , lens
+                    , mtl
+                    , filepath
+
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable force-push
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:
+        base
+        , force-push
+
+    hs-source-dirs:   src-bin
+    default-language: Haskell2010
